@@ -1,0 +1,72 @@
+{
+  "name": "threejs-tree-shake",
+  "version": "1.0.0",
+  "description": "Tree-shakes and optimizes ThreeJS apps",
+  "main": "./plugin.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "concat-stream": "^1.6.0",
+    "duplexer2": "^0.1.4",
+    "from2-string": "^1.1.0",
+    "pretty-bytes": "^4.0.2",
+    "require-path-relative": "^1.0.1",
+    "resolve": "^1.5.0",
+    "rollup": "^0.54.0",
+    "rollup-plugin-memory": "^2.0.0",
+    "strip-comments": "^0.4.4",
+    "through2": "^2.0.3"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-traverse": "^6.26.0",
+    "babelify": "^8.0.0",
+    "babylon": "^6.18.0",
+    "browserify": "^15.1.0",
+    "budo": "^10.0.4",
+    "map-limit": "0.0.1",
+    "pretty-ms": "^3.1.0",
+    "tape": "^4.8.0",
+    "three": "^0.89.0",
+    "uglify-js": "^3.3.7"
+  },
+  "scripts": {
+    "example-globals": "budo examples/globals.js -l -- -t [ babelify --presets es2015 ] -p [ ./ --loose ]",
+    "example-inspect": "budo examples/es5.js -l -- -p [ ./ --debug --inspect ]",
+    "example-gltf": "budo examples/import-with-gltf.js -l -- -t [ babelify --presets es2015 ] -p ./",
+    "example-es6": "budo examples/es6.js -l -- -t [ babelify --presets es2015 ] -p ./",
+    "test": "tape test/deps.js test/generate.js"
+  },
+  "keywords": [
+    "three",
+    "js",
+    "threejs",
+    "tree",
+    "shake",
+    "roll",
+    "rollup",
+    "bundle",
+    "browserify",
+    "browserified",
+    "transform",
+    "plugin",
+    "bundler",
+    "es6",
+    "import",
+    "export",
+    "webgl"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattdesl/threejs-tree-shake.git"
+  },
+  "homepage": "https://github.com/mattdesl/threejs-tree-shake",
+  "bugs": {
+    "url": "https://github.com/mattdesl/threejs-tree-shake/issues"
+  }
+}
